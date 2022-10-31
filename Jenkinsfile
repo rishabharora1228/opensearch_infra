@@ -24,6 +24,6 @@ stage("Terraform Init") {
 
   }
 }
-
+}
 
 
