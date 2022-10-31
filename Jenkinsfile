@@ -3,15 +3,15 @@ pipeline {
    agent any
 
   stages {
-// stage ('change directory') {
+stage ('change directory') {
 
-// steps {
+steps {
 
-// sh (‘cd /var/lib/jenkins/workspace/opensearch_infra’)
+sh (‘cd /var/lib/jenkins/workspace/opensearch_infra’)
 
-// }
+}
 
-// }
+}
     stage(‘Checkout’) {
 
 steps {
@@ -19,20 +19,6 @@ git branch: 'main', url: 'https://github.com/rishabharora1228/opensearch_infra.g
 
 }
     }
-// stage ('check1') {
-
-// steps {
-
-// sh (‘whoami’)
-// }
-// }
-// stage ('check2') {
-
-// steps {
-
-// sh (‘ls -la’)
-// }
-// }
 stage ('terraform init') {
 
 steps {
