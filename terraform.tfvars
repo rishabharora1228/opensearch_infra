@@ -52,4 +52,4 @@ node2_tags =  {
     purpose = "os-data-node"
 }
 access_key = "OpenSearch"
-key_path = "/home/jenkins/OpenSearch.pem"
+key_path = "/home/OpenSearch.pem"
