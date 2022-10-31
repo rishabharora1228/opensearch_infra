@@ -14,8 +14,9 @@ git branch: 'main', url: 'https://github.com/rishabharora1228/opensearch_infra.g
 stage ('terraform init') {
 
 steps {
-
+step {
 sh ‘terraform init’
+}
 }
 }
   }
