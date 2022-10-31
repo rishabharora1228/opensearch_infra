@@ -1,8 +1,8 @@
 pipeline {
 
    agent any
-   tools {
-  terraform 'Terraform'
+ parameters {
+  choice choices: ['apply', 'destroy'], description: 'Select any one option', name: 'terraform_Infra'
 }
 
 
@@ -34,7 +34,7 @@ stage("Terraform Init") {
   stage("Terraform Apply") {
       steps {
         script {
-            sh 'terraform destroy --auto-approve'
+            sh 'terraform ${terraform_Infra} --auto-approve'
           }
     }
 
