@@ -19,14 +19,27 @@ git branch: 'main', url: 'https://github.com/rishabharora1228/opensearch_infra.g
 
 }
     }
-
-stage ('terraform init') {
+stage ('check1') {
 
 steps {
 
-sh (‘terraform init’)
+sh (‘whoami’)
 }
 }
+stage ('check2') {
+
+steps {
+
+sh (‘ls -la’)
+}
+}
+// stage ('terraform init') {
+
+// steps {
+
+// sh (‘terraform init’)
+// }
+// }
   }
 }
 
