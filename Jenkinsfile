@@ -12,13 +12,13 @@ sh (‘cd /var/lib/jenkins/workspace/opensearch_infra’)
 }
 
 }
-    stage(‘Checkout’) {
+//     stage(‘Checkout’) {
 
-steps {
-git branch: 'main', url: 'https://github.com/rishabharora1228/opensearch_infra.git'
+// steps {
+// git branch: 'main', url: 'https://github.com/rishabharora1228/opensearch_infra.git'
 
-}
-    }
+// }
+//     }
 // stage ('terraform init') {
 
 // steps {
