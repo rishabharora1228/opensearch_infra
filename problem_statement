@@ -1,0 +1,23 @@
+AWS assignment- 5
+
+## Category
+- AWS Resources
+- Terraform modules
+- Terraform State management and state locking
+
+## Details
+
+In this assignment, we will create an end-to-end infrastructure using Terraform modules.
+
+## Must Do
+- Take reference to your previously created architecture diagram and create terraform code to implement the complete infrastructure over AWS using Terraform modules.
+- call the root modules using wrapper code for reusability
+- Achieve terrafom state managemnet using S3 and terrafom state locking using dynamodb.
+
+## Good to Do
+- Convert your code in two modules named Network and Security
+- Use data source while calling modules.
+
+## References
+- https://www.terraform.io/docs
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs
