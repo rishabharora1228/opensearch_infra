@@ -34,7 +34,7 @@ stage("Terraform Init") {
   stage("Terraform Apply") {
       steps {
         script {
-            sh 'terraform apply'
+            sh 'terraform apply --auto-approve'
           }
     }
 
