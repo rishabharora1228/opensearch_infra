@@ -5,13 +5,13 @@ pipeline {
   stages {
 stage ('change directory') {
 
-steps {
+// steps {
 
-sh (‘cd /var/lib/jenkins/workspace/opensearch_infra’)
+// sh (‘cd /var/lib/jenkins/workspace/opensearch_infra’)
 
-}
+// }
 
-}
+// }
     stage(‘Checkout’) {
 
 steps {
