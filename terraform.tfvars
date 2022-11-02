@@ -40,16 +40,19 @@ manager_tags = {
     Name    = "OS-Manager",
     Owner   = "Rishabh Arora",
     purpose = "os-manager"
+    env = "os"  
   }
 node1_tags =  {   
     Name    = "OS-Data-Node1",
     Owner   = "Rishabh Arora",
     purpose = "os-data-node"
+    env = "os" 
 }
 node2_tags =  {   
     Name    = "OS-Data-Node2",
     Owner   = "Rishabh Arora",
     purpose = "os-data-node"
+    env = "os" 
 }
 access_key = "OpenSearch"
 key_path = "/home/OpenSearch.pem"
