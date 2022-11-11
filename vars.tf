@@ -1,7 +1,7 @@
-variable "vpc_id" {
+variable "vpc_cidr" {
   default     = ""
   type        = string
-  description = "VPC ID for OpenSearch vpc"
+  description = "VPC CIDR for OpenSearch vpc"
 }
 variable "vpc_tags" {
   default     = {}
@@ -142,21 +142,32 @@ variable "ami" {
 variable "manager_tags" {
   type        = map(string)
   description = "tags for OpenSearch data-node1 instance"
-  default = {}
+  default     = {}
 }
 variable "node1_tags" {
   type        = map(string)
   description = "tags for OpenSearch data-node1 instance"
-  default = {}
+  default     = {}
 }
 variable "node2_tags" {
   type        = map(string)
   description = "tags for OpenSearch data-node1 instance"
-  default = {}
+  default     = {}
 }
 variable "access_key" {
-default = ""
+  default = ""
 }
 variable "key_path" {
-default = ""
+  default = ""
+}
+variable "key_id" {
+  default = ""
+}
+variable "existing_vpc_tags" {
+  type        = map(string)
+  default = {}
+}
+variable "existing_routetable_tags" {
+  type        = map(string)
+  default = {}
 }

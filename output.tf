@@ -28,6 +28,6 @@ output "data-node1-instance-id" {
 output "data-node2-instance-id" {
   value = module.node2.instance-id
 }
-output "key-id" {
-  value = module.access_key.key
-}
+# output "key-id" {
+#   value = module.access_key.key
+# }

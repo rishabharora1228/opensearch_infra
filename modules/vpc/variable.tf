@@ -1,4 +1,4 @@
-variable "vpc_id" {
+variable "vpc_cidr" {
   default     = ""
   type        = string
   description = "VPC ID for OpenSearch vpc"

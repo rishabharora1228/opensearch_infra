@@ -15,7 +15,7 @@ resource "aws_security_group" "private_security_group" {
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = "tcp"
-    cidr_blocks = [var.cidr]
+    cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
     description = "port for os-dashboard "
