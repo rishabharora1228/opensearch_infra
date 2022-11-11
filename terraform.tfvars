@@ -1,4 +1,4 @@
-vpc_id = "11.0.0.0/16"
+vpc_cidr = "11.0.0.0/16"
 vpc_tags = {
   Name    = "OpenSearch-vpc",
   Owner   = "Rishabh Arora",
@@ -35,24 +35,31 @@ pb_sg_tags = {
 public_subnet_zone   = "us-east-1a"
 private_subnet1_zone = "us-east-1b"
 private_subnet2_zone = "us-east-1c"
-ami= "ami-08c40ec9ead489470"
+ami                  = "ami-08c40ec9ead489470"
 manager_tags = {
-    Name    = "OS-Manager",
-    Owner   = "Rishabh Arora",
-    purpose = "os-manager"
-    env = "os"  
-  }
-node1_tags =  {   
-    Name    = "OS-Data-Node1",
-    Owner   = "Rishabh Arora",
-    purpose = "os-data-node"
-    env = "os" 
+  Name    = "OS-Manager",
+  Owner   = "Rishabh Arora",
+  purpose = "os-manager"
+  env     = "os"
 }
-node2_tags =  {   
-    Name    = "OS-Data-Node2",
-    Owner   = "Rishabh Arora",
-    purpose = "os-data-node"
-    env = "os" 
+node1_tags = {
+  Name    = "OS-Data-Node1",
+  Owner   = "Rishabh Arora",
+  purpose = "os-data-node"
+  env     = "os"
+}
+node2_tags = {
+  Name    = "OS-Data-Node2",
+  Owner   = "Rishabh Arora",
+  purpose = "os-data-node"
+  env     = "os"
 }
 access_key = "OpenSearch"
-key_path = "/home/OpenSearch.pem"
+key_path   = "/home/ubuntu/OpenSearch.pem"
+key_id = "cnode"
+existing_vpc_tags = {
+  Name = "jenkins-vpc"
+}
+existing_routetable_tags = {
+  Name = "defaultrt"
+}
