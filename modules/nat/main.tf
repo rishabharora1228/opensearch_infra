@@ -6,4 +6,5 @@ resource "aws_nat_gateway" "NAT_gateway" {
   tags              = var.NAT_tags
 }
 resource "aws_eip" "elasticIP" {
+  vpc      = true
 }
