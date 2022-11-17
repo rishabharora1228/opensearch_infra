@@ -13,7 +13,7 @@ variable "vpc_id" {
   type        = string
   description = "VPC ID for OpenSearch vpc"
 }
-variable "igw_id" {
+variable "nat_id" {
   default     = ""
   type        = string
 }
