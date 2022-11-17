@@ -58,7 +58,7 @@ module "pvt_subnet2" {
 module "pvt_rt_table" {
   source                  = "./modules/pvtroutetable"
   vpc_id                  = module.machine.vpc-id
-  igw_id                  = module.network.igw-id
+  nat_id                  = module.traffic.nat-id
   private_routeTable_tags = var.private_routeTable_tags
 }
 module "pvt_sg" {
