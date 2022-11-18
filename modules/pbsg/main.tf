@@ -8,10 +8,10 @@ resource "aws_security_group" "public_security_group" {
     from_port   = var.https_port
     to_port     = var.https_port
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.cidr]
   }
   ingress {
-    description = "Traffic from VPC"
+    description = "Traffic from internet"
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = "tcp"
