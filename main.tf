@@ -72,6 +72,7 @@ module "pb_sg" {
   source     = "./modules/pbsg"
   sg_pb      = var.sg_pb
   vpc_id     = module.machine.vpc-id
+  cidr        = var.vpc_cidr  
   pb_sg_tags = var.pb_sg_tags
 }
 # module "access_key" {
