@@ -34,6 +34,6 @@ resource "aws_route" "peering_2" {
 }
 resource "aws_route" "peering_3" {
   route_table_id            = "rtb-0835ec3d4aa844e52"
-  destination_cidr_block    = var.destination_cidr_block
+  destination_cidr_block    = data.aws_vpc.vpc.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection.vpc.id
 }
