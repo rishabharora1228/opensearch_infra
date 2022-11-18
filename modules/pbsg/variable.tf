@@ -48,6 +48,4 @@ variable "vpc_id" {
   type        = string
   description = "VPC ID for OpenSearch vpc"
 }
-variable "cidr" {
-  default     = {}
-}
+
