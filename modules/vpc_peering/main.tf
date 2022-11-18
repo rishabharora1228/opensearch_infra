@@ -14,9 +14,9 @@ resource "aws_vpc_peering_connection" "vpc" {
   peer_vpc_id   = data.aws_vpc.vpc.id
   vpc_id        = var.vpc_id
   auto_accept   = true
-    accepter {
-    allow_remote_vpc_dns_resolution = true
-  }
+#     accepter {
+#     allow_remote_vpc_dns_resolution = true
+#   }
 
   requester {
     allow_remote_vpc_dns_resolution = true
