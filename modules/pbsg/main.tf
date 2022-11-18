@@ -3,11 +3,6 @@ resource "aws_security_group" "public_security_group" {
   description = "security group of os engine"
   vpc_id      = var.vpc_id
 
-    ingress {
-    description = "Traffic from VPC"
-    protocol    = "tcp"
-    cidr_blocks = [var.cidr]
-  }
   ingress {
     description = "Traffic from VPC"
     from_port   = var.https_port
