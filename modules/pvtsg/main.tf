@@ -11,7 +11,7 @@ resource "aws_security_group" "private_security_group" {
     cidr_blocks = [var.cidr]
   }
   ingress {
-    description = "Traffic from VPC"
+    description = "Traffic from internet"
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = "tcp"
