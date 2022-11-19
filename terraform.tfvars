@@ -64,3 +64,6 @@ existing_routetable_tags = {
   Name = "defaultrt"
 }
 instance_type = "t2.large"
+manager_zone = "us-east-1a"
+node1_zone   = "us-east-1b"
+node2_zone   = "us-east-1c"
