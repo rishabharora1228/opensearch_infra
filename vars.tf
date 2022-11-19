@@ -41,6 +41,16 @@ variable "private_subnet2_tags" {
   description = "tags for OpenSearch subnet2"
   type        = map(string)
 }
+variable "private_subnet3_cidr" {
+  type        = string
+  description = "CIDR block for subnet2"
+  default     = ""
+}
+variable "private_subnet3_tags" {
+  default     = {}
+  description = "tags for OpenSearch subnet2"
+  type        = map(string)
+}
 variable "private_subnet1_zone" {
   default = {}
 }
