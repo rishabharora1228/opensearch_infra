@@ -1,6 +1,9 @@
 variable "peering1_id" {
   default     = ""
 }
+variable "peering2_id" {
+  default     = ""
+}
 variable "vpc_id" {
   default     = ""
 }
