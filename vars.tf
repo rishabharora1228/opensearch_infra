@@ -174,3 +174,12 @@ variable "existing_routetable_tags" {
 variable "instance_type" {
 default = ""
 }
+variable "manager_zone" {
+default = ""
+}
+variable "node1_zone" {
+default = ""
+}
+variable "node2_zone" {
+default = ""
+}
