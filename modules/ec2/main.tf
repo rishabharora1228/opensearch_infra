@@ -5,5 +5,4 @@ resource "aws_instance" "ec2" {
   key_name               = var.key_id
   vpc_security_group_ids = [var.security_group]
   subnet_id              = var.subnet
-  availability_zone      = var.avl_zone
 }
