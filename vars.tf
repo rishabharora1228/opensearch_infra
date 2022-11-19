@@ -47,6 +47,9 @@ variable "private_subnet1_zone" {
 variable "private_subnet2_zone" {
   default = {}
 }
+variable "private_subnet3_zone" {
+  default = {}
+}
 variable "sg_pvt" {
   type        = string
   description = "private security group"
@@ -151,7 +154,12 @@ variable "node1_tags" {
 }
 variable "node2_tags" {
   type        = map(string)
-  description = "tags for OpenSearch data-node1 instance"
+  description = "tags for OpenSearch data-node2 instance"
+  default     = {}
+}
+variable "node3_tags" {
+  type        = map(string)
+  description = "tags for OpenSearch data-node3 instance"
   default     = {}
 }
 variable "access_key" {
