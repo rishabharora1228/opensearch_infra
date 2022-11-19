@@ -28,6 +28,4 @@ default = ""
 variable "instance_type" {
 default = ""
 }
-variable "avl_zone" {
-default = ""
-}
+
