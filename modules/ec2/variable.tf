@@ -25,3 +25,6 @@ variable "subnet" {
 variable "key_id" {
 default = ""
 }
+variable "instance_type" {
+default = ""
+}
