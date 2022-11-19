@@ -3,6 +3,7 @@
 module "vpc_peering" {
   source      = "./modules/vpc_peering"
   peering1_id = module.pvt_rt_table.private_routeTable_id
+  peering2_id = module.pb_rt_table.public_routeTable_id
   vpc_id = module.machine.vpc-id
   existing_vpc_tags = var.existing_vpc_tags
   existing_routetable_tags = var.existing_routetable_tags
