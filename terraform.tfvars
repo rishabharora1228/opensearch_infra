@@ -63,3 +63,4 @@ existing_vpc_tags = {
 existing_routetable_tags = {
   Name = "defaultrt"
 }
+instance_type = "t2.large"
