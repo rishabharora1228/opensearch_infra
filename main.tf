@@ -86,6 +86,7 @@ module "manager" {
   security_group = module.pb_sg.public-sg-id
   ec2_tags       = var.manager_tags
   key_id         = var.key_id
+  intance_type   = var.instance_type  
 }
 module "node1" {
   source         = "./modules/ec2"
@@ -94,6 +95,7 @@ module "node1" {
   security_group = module.pvt_sg.private-sg-id
   ec2_tags       = var.node1_tags
   key_id         = var.key_id
+  intance_type   = var.instance_type  
 }
 module "node2" {
   source         = "./modules/ec2"
@@ -102,4 +104,5 @@ module "node2" {
   security_group = module.pvt_sg.private-sg-id
   ec2_tags       = var.node2_tags
   key_id         = var.key_id
+  intance_type   = var.instance_type  
 }
