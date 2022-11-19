@@ -4,21 +4,27 @@ vpc_tags = {
   Owner   = "Rishabh Arora",
   purpose = "os server"
 }
-public_subnet_cidr = "11.0.192.0/19"
+public_subnet_cidr = "11.0.0.0/18"
 public_subnet_tags = {
   Name    = "os-subnet",
   Owner   = "Rishabh Arora",
   purpose = "os manager"
 }
-private_subnet1_cidr = "11.0.160.0/19"
+private_subnet1_cidr = "11.0.64.0/18"
 private_subnet1_tags = {
   Name    = "data-node1",
   Owner   = "Rishabh Arora",
   purpose = "os data node"
 }
-private_subnet2_cidr = "11.0.128.0/19"
+private_subnet2_cidr = "11.0.128.0/18"
 private_subnet2_tags = {
   Name    = "data-node2",
+  Owner   = "Rishabh Arora",
+  purpose = "os data node"
+}
+private_subnet3_cidr = "11.0.192.0/18"
+private_subnet3_tags = {
+  Name    = "co-ordinating-node",
   Owner   = "Rishabh Arora",
   purpose = "os data node"
 }
@@ -35,21 +41,28 @@ pb_sg_tags = {
 public_subnet_zone   = "us-east-1a"
 private_subnet1_zone = "us-east-1b"
 private_subnet2_zone = "us-east-1c"
+private_subnet3_zone = "us-east-1d"
 ami                  = "ami-08c40ec9ead489470"
 manager_tags = {
-  Name    = "OS-Manager",
+  Name    = "opensearch-cluster_manager",
   Owner   = "Rishabh Arora",
   purpose = "os-manager"
   env     = "os"
 }
 node1_tags = {
-  Name    = "OS-Data-Node1",
+  Name    = "opensearch-d1",
   Owner   = "Rishabh Arora",
   purpose = "os-data-node"
   env     = "os"
 }
 node2_tags = {
-  Name    = "OS-Data-Node2",
+  Name    = "opensearch-d2",
+  Owner   = "Rishabh Arora",
+  purpose = "os-data-node"
+  env     = "os"
+}
+node3_tags = {
+  Name    = "opensearch-c1",
   Owner   = "Rishabh Arora",
   purpose = "os-data-node"
   env     = "os"
