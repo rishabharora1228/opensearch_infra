@@ -171,3 +171,6 @@ variable "existing_routetable_tags" {
   type        = map(string)
   default = {}
 }
+variable "instance_type" {
+default = ""
+}
