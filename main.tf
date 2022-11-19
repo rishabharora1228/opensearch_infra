@@ -53,9 +53,17 @@ module "pvt_subnet2" {
   vpc_id                = module.machine.vpc-id
   private_subnet_tags   = var.private_subnet2_tags
   private_subnet_cidr   = var.private_subnet2_cidr
-  private_subnet_zone   = var.private_subnet1_zone
+  private_subnet_zone   = var.private_subnet2_zone
   private_routeTable_id = module.pvt_rt_table.private_routeTable_id
 }
+module "pvt_subnet3" {
+  source                = "./modules/privatesubnet"
+  vpc_id                = module.machine.vpc-id
+  private_subnet_tags   = var.private_subnet3_tags
+  private_subnet_cidr   = var.private_subnet3_cidr
+  private_subnet_zone   = var.private_subnet3_zone
+  private_routeTable_id = module.pvt_rt_table.private_routeTable_id
+}    
 module "pvt_rt_table" {
   source                  = "./modules/pvtroutetable"
   vpc_id                  = module.machine.vpc-id
@@ -104,6 +112,15 @@ module "node2" {
   subnet         = module.pvt_subnet2.private-subnet-id
   security_group = module.pvt_sg.private-sg-id
   ec2_tags       = var.node2_tags
+  key_id         = var.key_id
+  instance_type   = var.instance_type 
+}
+module "node3" {
+  source         = "./modules/ec2"
+  ami            = var.ami
+  subnet         = module.pvt_subnet3.private-subnet-id
+  security_group = module.pvt_sg.private-sg-id
+  ec2_tags       = var.node3_tags
   key_id         = var.key_id
   instance_type   = var.instance_type 
 }
