@@ -8,6 +8,9 @@ module "vpc_peering" {
   existing_vpc_tags = var.existing_vpc_tags
   existing_routetable_tags = var.existing_routetable_tags
   destination_cidr_block = var.vpc_cidr
+      depends_on = [
+    module.pvt_rt_table.private_routeTable_id
+  ]
 }
 
 
